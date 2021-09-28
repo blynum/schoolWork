@@ -8,6 +8,11 @@
     margin: auto;
 }
 
+p {
+    text-align: center;
+    
+}
+
 #add-item {
     border: 1px solid black;
 }
