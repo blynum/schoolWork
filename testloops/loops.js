@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 // Loops through the following array and count how many "computer" there are. Log the final count
 
 // var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"]
@@ -54,11 +61,24 @@ var arrayOfArrays = [
 ]
 
 // Indexing and logging the inner [i] and outer [j] arrays
-for (var i = 0; i < arrayOfArrays.length; i++) {
-    for (var j = 0; j < arrayOfArrays[i].length; j++){
+for (var i = 0; i < arrayOfArrays.length; i++) {      /* how many times will this loop run? = 3 times*/
+    for (var j = 0; j < arrayOfArrays[i].length; j++){  /* how many times will this loop run? = 9 times */
         console.log(arrayOfArrays[i][j])
 
     }
 }
 
-    
+
+// console.log the number 6
+
+// console.log(arrayOfArrays[1][2])
+
+// console.log the number 1
+// console.log(arrayOfArrays[0][0])
+
+
+
+// console.log the number 9
+// console.log(arrayOfArrays[2][2])
+
+
