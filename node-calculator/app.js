@@ -1,9 +1,9 @@
 
 
-var readlineSync = require('readline-sync');
-var num1 = parseInt(readlineSync.question('May I have your 1st number? '));
-var num2 = parseInt(readlineSync.question('May I have your 2nd number? '));
-var operation = (readlineSync.question('Please enter the operation to perform? '));
+import { question } from 'readline-sync';
+var num1 = parseInt(question('May I have your 1st number? '));
+var num2 = parseInt(question('May I have your 2nd number? '));
+var operation = (question('Please enter the operation to perform? '));
 
 
 if(operation == 'add') {
