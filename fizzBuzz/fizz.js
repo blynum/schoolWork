@@ -11,7 +11,7 @@
             //  console.log("buzz")
             nums += "buzz";
         }
-        else if(i % 3 === 0 && i % 5 ===0){
+        else if(i % 3 === 0 && i % 5 === 0){
             nums += "fizzbuzz";
         } 
         else 
