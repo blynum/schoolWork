@@ -8,54 +8,74 @@
     <title>Mario Pest Control</title>
   </head>
   <body>
-    <header>Mario Pest Control</header>
-    <main>
-      <header>Baddies Caught</header>
-      <form>
-        <ul>
-          <li>
-            Goombas: 5 Coins
-            <div>
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/c/ce/Goomba.PNG"
-                alt="Goombas"
-              />
-            </div>
-            <input type="number" />
-            <button>submit</button>
-          </li>
-          <li>
-            Bob-ombs: 7 coins
-            <div>
-              <img
-                src="https://mario.wiki.gallery/images/thumb/9/9e/Bobomb_-_MarioPartyStarRush.png/1200px-Bobomb_-_MarioPartyStarRush.png"
-                alt="Bob-omb"
-              />
-            </div>
-            <input type="number" />
-            <button>submit</button>
-          </li>
-          <li>
-            Cheep-cheeps: 11 coins
-            <div>
-              <img
-                src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/new-super-mario-bros-u/2/29/DeepCheepNSMBU.png"
-                alt="Cheep Cheep"
-              />
-            </div>
-            <input type="number" />
-            <button>submit</button>
-          </li>
-        </ul>
-        Total:
-      </form>
-    </main>
+      <div id=gridContainer>
 
-    <footer>
-      <p>Email: mario@mariopestcontrol.com</p>
-      <p>Website: www.mariopestcontrol.com</p>
-      <p>Address: 123 Bowser Blvd Washington, DC 200019</p>
-    </footer>
+          <header>
+            <div class="title">Mario Pest Control</div>
+        
+        </header>
+        <main>
+            <p><h2>Baddies Caught</h2></p>
+            <div >
+                <form name="marioForm" id="formGrid">
+                 <div class="marioPic">
+                   <img
+                     src="https://mario.wiki.gallery/images/thumb/2/25/Mario_New_Super_Mario_Bros_U_Deluxe.png/800px-Mario_New_Super_Mario_Bros_U_Deluxe.png" 
+                     alt="Mario"
+                   />
+                 </div>
+                      <div class="goomba">
+                          
+                            Goombas: 5 Coins
+                            <div>
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/en/c/ce/Goomba.PNG"
+                                alt="Goombas"
+                              />
+                            </div>
+                            <input type="number" name="gooPest" />
+                            <button>submit</button>
+                          
+                      </div>
+                <div class="bomb">
+                    
+                      Bob-ombs: 7 coins
+                      <div>
+                        <img
+                          src="https://mario.wiki.gallery/images/thumb/9/9e/Bobomb_-_MarioPartyStarRush.png/1200px-Bobomb_-_MarioPartyStarRush.png"
+                          alt="Bob-omb"
+                        />
+                      </div>
+                      <input type="number" name="bobPest" />
+                      <button>submit</button>
+                    
+                </div>
+                <div class="cheep">
+                    
+                      Cheep-cheeps: 11 coins
+                      <div>
+                        <img
+                          src="https://oyster.ignimgs.com/mediawiki/apis.ign.com/new-super-mario-bros-u/2/29/DeepCheepNSMBU.png"
+                          alt="Cheep Cheep"
+                        />
+                      </div>
+                      <input type="number" name="cheePest" />
+                      <button>submit</button>
+                    
+                </div>
+            
+                  <h1>Total:</h1>
+            </div>
+            </form>
+          </main>
+      
+          <footer>
+            <p>Email: mario@mariopestcontrol.com</p>
+            <p class="website">Website: www.mariopestcontrol.com</p>
+            <p class="address">Address: 123 Bowser Blvd Washington, DC 200019</p>
+            <img src="https://www.mariowiki.com/Grass#/media/File:SMA4_Grass_sprite.gif" alt="" srcset="">
+          </footer>
+      </div>
 
     <script src="marPest.js"></script>
   </body>
