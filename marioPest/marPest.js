@@ -1,27 +1,35 @@
 const form = document.marioForm;
 
-function gooPest(pest1) {
-  return pest1 * 5;
+function gooPest(num) {
+  return num * 5;
 }
+console.log(gooPest(1));
 
-function bobPest(pest2) {
-  return pest2 * 7;
+function bobPest(num) {
+  return num * 7;
 }
-function cheePest(pest3) {
-  return pest3 * 11;
-}
+console.log(bobPest(2));
 
-function sum(gooPest, bobPest, cheePest) {
-  return gooPest + bobPest + cheePest;
+function cheePest(num) {
+  return num * 11;
 }
+console.log(cheePest(3));
+
+function sum(num) {
+  return gooPest(num) + bobPest(num) + cheePest(num);
+}
+console.log(sum(1, 2, 3));
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const gooPest = form.gooPest.value;
   const bobPest = form.bobPest.value;
   const cheePest = form.cheePest.value;
-  //   const total = sum(gooPest, bobPest, cheePest);
+  const total = sum(gooPest, bobPest, cheePest);
   form.gooPest.value = "";
   form.bobPest.value = "";
   form.cheePest.value = "";
+  const h1 = document.createElement("h1");
+  h1.textContent = "Total Price: " + "$" + total;
+  document.getElementsByClassName("totalPrice")[0].append(h1);
 });
