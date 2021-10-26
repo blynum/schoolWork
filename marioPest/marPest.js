@@ -15,8 +15,8 @@ function cheePest(num) {
 }
 console.log(cheePest(3));
 
-function sum(num) {
-  return gooPest(num) + bobPest(num) + cheePest(num);
+function sum(num1, num2, num3) {
+  return gooPest(num1) + bobPest(num2) + cheePest(num3);
 }
 console.log(sum(1, 2, 3));
 
