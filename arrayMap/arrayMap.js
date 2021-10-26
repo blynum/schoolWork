@@ -87,7 +87,7 @@ console.log(
 
 function makeStrings(names) {
   return names.map(function (name) {
-    if (makeStrings.age > 50) {
+    if (name.age > 50) {
       return name.name + " can go into the Matrix";
     } else return name.name + " is under age";
   });
