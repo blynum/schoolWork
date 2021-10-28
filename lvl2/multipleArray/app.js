@@ -42,49 +42,62 @@ var peopleArray = [
   },
 ];
 
+function sortedOfAge(arr) {
+  return arr
+    .filter(function (person) {
+      if (person.age > 18) {
+        return person.firstName + " " + person.lastName;
+      }
+    })
+    .sort(function (a, b) {
+      if (a.lastName > b.lastName) {
+        return 1;
+      } else if (a.lastName < b.lastName) {
+        return -1;
+      } else {
+        return 0;
+      }
+    })
+    .map(function (person) {
+      return (
+        "<li>" +
+        person.firstName +
+        " " +
+        person.lastName +
+        " is " +
+        person.age +
+        "<li>"
+      );
+    });
+}
+
 // function sortedOfAge(arr) {
-// return arr
+//   const filtered = arr
 //     .filter(function (person) {
 //       if (person.age > 18) {
 //         return person.firstName + " " + person.lastName;
 //       }
 //     })
 //     .sort(function (a, b) {
-//       return a.lastName - b.lastName;
-//     })
-//     .map(function (person) {
-//       return (
-//         "<li>" +
-//         person.firstName +
-//         " " +
-//         person.lastName +
-//         " is " +
-//         person.age +
-//         "<li>"
-//       );
+//       if (a.lastName > b.lastName) {
+//         return 1;
+//       } else if (a.lastName < b.lastName) {
+//         return -1;
+//       } else {
+//         return 0;
+//       }
 //     });
+//   return filtered.map(function (person) {
+//     return (
+//       "<li>" +
+//       person.firstName +
+//       " " +
+//       person.lastName +
+//       " is " +
+//       person.age +
+//       "<li>"
+//     );
+//   });
 // }
-
-function sortedOfAge(arr) {
-  const filtered = arr.filter(function (person) {
-    if (person.age > 18) {
-      return person.firstName + " " + person.lastName;
-    }
-  });
-  filtered.sort(function (a, b) {
-    return a.lastName - b.lastName;
-  });
-  return filtered.map(function (person) {
-    return (
-      "<li>" +
-      person.firstName +
-      " " +
-      person.lastName +
-      " is " +
-      person.age +
-      "<li>"
-    );
-  });
-}
 
 console.log(sortedOfAge(peopleArray));
