@@ -125,8 +125,8 @@ console.log(
 
 // 6) Make an array of the names in `h1`s, and the ages in `h2`s**
 
-function readyToPutInTheDOM(itmes) {
-  return itmes.map(function (item) {
+function readyToPutInTheDOM(items) {
+  return items.map(function (item) {
     return "<h1>" + item.name + "</h1>" + "<h2>" + item.age + "</h2>";
   });
 }
