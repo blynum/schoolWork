@@ -30,16 +30,19 @@ console.log(lengthSort(["dog", "wolf", "by", "family", "eaten"])); // ["by", "do
 
 // ### **4) Sort an array alphabetically**
 
+// function alphabetical(arr) {
+//   return arr.sort(function (a, b) {
+//     if (a > b) {
+//       return 1;
+//     } else if (a < b) {
+//       return -1;
+//     } else {
+//       return 0;
+//     }
+//   });
+// }
 function alphabetical(arr) {
-  return arr.sort(function (a, b) {
-    if (a > b) {
-      return 1;
-    } else if (a < b) {
-      return -1;
-    } else {
-      return 0;
-    }
-  });
+  return arr.sort();
 }
 
 console.log(alphabetical(["dog", "wolf", "by", "family", "eaten"])); // ["by", "dog", "eaten", "family", "wolf"]
@@ -64,3 +67,7 @@ console.log(
 //  { name: 'Quiet Samurai', age: 22 },
 //  { name: 'Unlucky Swami', age: 77 },
 //  { name: 'Arrogant Ambassador', age: 100 } ]
+
+var words = ["bat", "pineapple", "drugs", "zebra", "ghost"];
+
+console.log(words.sort());
