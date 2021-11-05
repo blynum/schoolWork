@@ -35,3 +35,16 @@ Purpose: Call a function after a certain amount of time
         *finally
         *throw
         *Error
+
+# ES6 Review
+
+let and const scope to the nearest curly bracket
+var scopes to the functions curly bracket
+const = once declared cannot be redeclared
+
+    ## Keywords
+        *arrow functions
+        *rest
+        *spread
+        *destructuring in a parameter
+        *default parameter
