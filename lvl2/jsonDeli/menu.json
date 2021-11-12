@@ -1,0 +1,76 @@
+{
+  "menu": [
+    {
+      "appetizers": {
+        "wings": {
+          "ingredients": ["Chicken", "Sauce"],
+          "description": "Delicous Chicken Wings"
+        },
+        "nachos": {
+          "ingredients": ["chips", "cheese", "salsa"],
+          "description": "Crunchy, Cheesy, Spicy"
+        },
+        "fruit bowl": {
+          "ingredients": ["apple slices", "orange slices", "blueberries"],
+          "description": "Fresh, Crispy and Natural"
+        }
+      }
+    },
+    {
+      "cold sandwich": {
+        "turkey sandwich": {
+          "ingredients": ["bread", "turkey", "cheese"],
+          "description": "Simple Sandwich"
+        },
+        "Peanut Butter": {
+          "ingredients": ["bread", "peanet butter", "jelly"],
+          "description": "Old School Favorite"
+        },
+        "ham sandwich": {
+          "ingredients": ["bread", "ham", "cheese"],
+          "description": "Simple Sandwich #2"
+        }
+      }
+    },
+    {
+      "hot sandwich": {
+        "fish sandwich": {
+          "ingredients": ["fish", "bread", "cheese"],
+          "description": "Sandwich from the Sea"
+        },
+        "meatball sandwich": {
+          "ingredients": ["meatball", "speghetti sause", "bread"],
+          "description": "Messy and Tasty"
+        },
+        "hamburger": {
+          "ingredients": ["hamburger", "pickles", "bread"],
+          "description": "Fresh off the grill"
+        }
+      }
+    },
+    {
+      "dessert": {
+        "ice cream": {
+          "ingredients": ["milk", "cream", "sugar", "ice"],
+          "description": "Sweet and Cold"
+        },
+        "cake": {
+          "ingredients": ["flour", "milk", "sugar", "eggs", "butter"],
+          "description": "Sweet and Tasty"
+        }
+      }
+    },
+    {
+      "drinks": {
+        "water": {
+          "ingredients": ["water", "ice"],
+          "description": "Simple and Refreshing"
+        },
+        "lemondade": {
+          "ingredients": ["water", "lemons", "sugar", "ice"],
+          "description": "Sweet, Sour, and Refreshing"
+        }
+      }
+    }
+  ]
+}

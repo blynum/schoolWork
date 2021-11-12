@@ -20,7 +20,7 @@ console.log(combineFruit(["apple", "pear"], ["cake", "pie"], ["carrot"]));
 //      }
 
 // Use destructuring to use the property names as variables. Desructure the object in the parameter:
-function parseSentence({ location, duration }) {
+function parseSentence(location, duration) {
   return `We're going to have a good time in ${location} for ${duration}`;
 }
 
@@ -92,18 +92,25 @@ function unshift(array, ...another) {
 console.log(unshift([1, 2, 3], [4, 5, 6]));
 
 // Write some destructuring code to help this function out. Use the ES6 shorthand that helps make the syntax look less redundant to simplify it:
-// function populatePeople(names){
-//     return names.map(function(name){
-//         name = name.split(" ");
-//         // your code
-//         return {
-//             firstName: firstName,
-//             lastName: lastName
-//         }
-//     })
+
+function populatePeople(firstName, lastName) {
+  return names.map(function (name) {
+    let name = name.split(" ");
+    // your code
+    return {
+      firstName: firstName,
+      lastName: lastName,
+    };
+  });
+}
+// function populatePeople(firstName, lastName) {
+//   return {
+//     firstName,
+//     lastName,
+//   };
 // }
 
-// populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"])
+console.log(populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"]));
 //[
 //  {firstName: "Frank", lastName: "Peterson"},
 //  {firstName: "Suzy", lastName: "Degual"},
