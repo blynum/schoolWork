@@ -195,7 +195,7 @@ function getAgeRange(person) {
   }
   return ageRange;
 }
-// What would the above functin potentially look like if we destructured the person parameter?
+// What would the above functioon potentially look like if we destructured the person parameter?
 
 function getAgeRange({ age }) {
   let ageRange;

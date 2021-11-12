@@ -55,7 +55,7 @@ function returnFavorites([firstFav, secondFav, thirdFav]) {
 console.log(returnFavorites(favoriteActivities));
 
 // Use the Rest and Spread Operator to help take any number of arrays, and return one array. You will need to change how the arrays are passed in. You may write it assuming you will always recieve three arrays if you would like to.
-function combineAnimals(array, second, ...third) {
+function combineAnimals(array, second, third) {
   return [...array, ...second, ...third];
 }
 
@@ -89,17 +89,18 @@ function unshift(array, ...another) {
   return [...array, ...another];
 }
 
-console.log(unshift([1, 2, 3], [4, 5, 6]));
+console.log(unshift([1, 2, 3], 4, 5, 6));
 
 // Write some destructuring code to help this function out. Use the ES6 shorthand that helps make the syntax look less redundant to simplify it:
 
-function populatePeople(firstName, lastName) {
+function populatePeople(names) {
   return names.map(function (name) {
-    let name = name.split(" ");
+    let name1 = name.split(" ");
+    console.log(name1);
     // your code
     return {
-      firstName: firstName,
-      lastName: lastName,
+      firstName: name1[0],
+      lastName: name1[1],
     };
   });
 }

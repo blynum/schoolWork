@@ -1,76 +1,89 @@
 {
   "menu": [
     {
-      "appetizers": {
-        "wings": {
+      "appetizers": [
+        {
+          "name": "wings",
           "ingredients": ["Chicken", "Sauce"],
           "description": "Delicous Chicken Wings"
         },
-        "nachos": {
+        {
+          "name": "nachos",
           "ingredients": ["chips", "cheese", "salsa"],
           "description": "Crunchy, Cheesy, Spicy"
         },
-        "fruit bowl": {
+        {
+          "name": "fruit bowl",
           "ingredients": ["apple slices", "orange slices", "blueberries"],
           "description": "Fresh, Crispy and Natural"
         }
-      }
+      ]
     },
     {
-      "cold sandwich": {
-        "turkey sandwich": {
+      "cold sandwich": [
+        {
+          "name": "turkey sandwich",
           "ingredients": ["bread", "turkey", "cheese"],
           "description": "Simple Sandwich"
         },
-        "Peanut Butter": {
+        {
+          "name": "Peanut Butter",
           "ingredients": ["bread", "peanet butter", "jelly"],
           "description": "Old School Favorite"
         },
-        "ham sandwich": {
+        {
+          "name": "ham sandwich",
           "ingredients": ["bread", "ham", "cheese"],
           "description": "Simple Sandwich #2"
         }
-      }
+      ]
     },
     {
-      "hot sandwich": {
-        "fish sandwich": {
+      "hot sandwich": [
+        {
+          "name": "fish sandwich",
           "ingredients": ["fish", "bread", "cheese"],
           "description": "Sandwich from the Sea"
         },
-        "meatball sandwich": {
+        {
+          "name": "meatball sandwich",
           "ingredients": ["meatball", "speghetti sause", "bread"],
           "description": "Messy and Tasty"
         },
-        "hamburger": {
+        {
+          "name": "hamburger",
           "ingredients": ["hamburger", "pickles", "bread"],
           "description": "Fresh off the grill"
         }
-      }
+      ]
     },
     {
-      "dessert": {
-        "ice cream": {
+      "dessert": [
+        {
+          "name": "ice cream",
           "ingredients": ["milk", "cream", "sugar", "ice"],
           "description": "Sweet and Cold"
         },
-        "cake": {
+        {
+          "name": "cake",
           "ingredients": ["flour", "milk", "sugar", "eggs", "butter"],
           "description": "Sweet and Tasty"
         }
-      }
+      ]
     },
     {
-      "drinks": {
-        "water": {
+      "drinks": [
+        {
+          "name": "water",
           "ingredients": ["water", "ice"],
           "description": "Simple and Refreshing"
         },
-        "lemondade": {
+        {
+          "name": "lemondade",
           "ingredients": ["water", "lemons", "sugar", "ice"],
           "description": "Sweet, Sour, and Refreshing"
         }
-      }
+      ]
     }
   ]
 }

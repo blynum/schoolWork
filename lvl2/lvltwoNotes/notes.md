@@ -48,3 +48,25 @@ const = once declared cannot be redeclared
         *spread
         *destructuring in a parameter
         *default parameter
+
+# URL
+
+    #Uniform Resource Locator
+
+    - www.amazon.com/clothing
+
+    # Base URL = www.amazon.com
+
+    # Endpoint = /clothing/jackets/d5890f
+
+    # Parameter = requesting specific resources from a database (id)
+    - /clothing/jackets/d5890f
+    - /clothing/jackets/:_id
+
+    # Query (query strings)
+     -www.amazon.com/clothing/jackets?color=black&type=leather
+
+     const query = {
+         color: black,
+         type:  leather
+     }
