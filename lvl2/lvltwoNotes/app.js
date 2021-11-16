@@ -328,3 +328,80 @@ function product(a, b, c, d, e) {
 }
 
 console.log(product());
+
+// AJAX
+// XMLHttpRequest
+// xhr.onreadystatechange
+// xhr.readyState
+// xhr.status
+// xhr.responseText
+
+// Two methods
+
+const xhr = new XMLHttpRequest();
+
+// What type of request
+
+// Requesting single data
+
+// method   URL                        async
+// xhr.open("GET", "https://swapi.co/api/people/1", true);
+// xhr.send();
+
+// xhr.onreadystatechange = function () {
+//   if (xhr.readyState === 4 && xhr.status === 200) {
+//     const JSONdata = xhr.responseText;
+//     // change string of the xhr.responseText to JSON
+//     const data = JSON.parse(JSONdata);
+//     // console.log(data);
+//     showData(data);
+//     // error handling
+//   } else if (xhr.readyState === 4 && xhr.status !== 200) {
+//     console.log(xhr.responseText);
+//   }
+// };
+
+// // Show Data on the HTML page
+// function showData(luke) {
+//   const h1 = document.createElement("h1");
+//   h1.textContent = luke.name;
+//   document.body.appendChild(h1);
+// }
+
+// Requesting mutiple
+xhr.open("GET", "https://swapi.co/api/people/1", true);
+xhr.send();
+
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    const JSONdata = xhr.responseText;
+    // change string of the xhr.responseText to JSON
+    const data = JSON.parse(JSONdata);
+    // console.log(data.results);
+    showData(data.results);
+    // error handling
+  } else if (xhr.readyState === 4 && xhr.status !== 200) {
+    console.log(xhr.responseText);
+  }
+};
+
+// Show Data on the HTML page
+function showData(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const h1 = document.createElement("h1");
+    h1.textContent = arr[i].name;
+    document.body.appendChild(h1);
+  }
+}
+
+// xhr.readyState;
+// stage 1 = request has been sent
+// 2
+// 3
+// 4 - server has responded
+
+// xhr.status;
+// 200 - good to go
+// 404 - page cannot be found
+// 201
+// 500 - something is wrong with server
