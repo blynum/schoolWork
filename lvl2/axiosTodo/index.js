@@ -17,6 +17,7 @@ function listData(data) {
         const h3 = document.createElement('h3')
         h3.textContent = data[i].description
         document.getElementById('todo-list').appendChild(h3)
+        // maybe putting an if statement for image if image url is entered?
         const image = document.createElement('img')
         image.src = data[i].imgUrl
         image.style.width = "300px"
@@ -32,33 +33,38 @@ function listData(data) {
         document.getElementById('todo-list').appendChild(deleteButton)
 
         checkbox.checked = data[i].completed
-        checkbox.addEventListener('click', e => {
-            if (checkbox.checked) {
-                h1.style.textDecoration = "line-through"
-                axios.put(`https://api.vschool.io/belita/todo/${data[i]._id}`, { completed: true })
-                    .then(res => getData())
-                    .catch(err => console.log(err))
-            } else {
-                h1.style.textDecoration = "none"
-                axios.put(`https://api.vschool.io/belita/todo/${data[i]._id}`, { completed: false })
-                    .then(res => getData())
-                    .catch(err => console.log(err))
-            }
-        })
+        h1.style.textDecoration = data[i].completed ? "line-through" : "none"
+        // checkbox.addEventListener('click', e => {
+        //     if (checkbox.checked) {
+        //         h1.style.textDecoration = "line-through"
+        //         axios.put(`https://api.vschool.io/belita/todo/${data[i]._id}`, { completed: true })
+        //             .then(res => getData())
+        //             .catch(err => console.log(err))
 
-
-        // checkbox.addEventListener('change', e => {
-        //     axios.put("https://api.vschool.io/belita/todo/" + data[i]._id, { completed: true })
-        //         .then(response => {
-        //             {
-        //                 if (checkbox.checked) {
-        //                     h1.style.textDecoration = "line-through"
-        //                 } else {
-        //                     h1.style.textDecoration = "none"
-        //                 }
-        //             }
-        //         })
+        //     } else {
+        //         h1.style.textDecoration = "none"
+        //         axios.put(`https://api.vschool.io/belita/todo/${data[i]._id}`, { completed: false })
+        //             .then(res => getData())
+        //             .catch(err => console.log(err))
+        //     }
         // })
+
+
+        checkbox.addEventListener('change', e => {
+            axios.put("https://api.vschool.io/belita/todo/" + data[i]._id, { completed: true })
+                .then(response => {
+                    {
+                        if (checkbox.checked) {
+                            h1.style.textDecoration = "line-through"
+                        } else {
+                            h1.style.textDecoration = "none"
+                            axios.put(`https://api.vschool.io/belita/todo/${data[i]._id}`, { completed: false })
+                                .then(res => getData())
+                                .catch(err => console.log(err))
+                        }
+                    }
+                })
+        })
 
         deleteButton.addEventListener("click", e => {
             axios.delete("https://api.vschool.io/belita/todo/" + data[i]._id)

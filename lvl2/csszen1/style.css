@@ -216,10 +216,19 @@ img {
     height: 100%;
     top: -100%;
   }
+
+  .footer {
+    /* make these span the width of the page */
+    /* display: flex; */
+    background-color: #144347;
+    grid-column: 1/4;
+    grid-row: 8/9;
+    /* height: 55px; */
+  }
   .authors {
     background-color: #e4ede7;
     grid-column: 1/4;
-    grid-row: 8/9;
+    grid-row: 9/10;
   }
   .links {
     background-color: #b3cdbd;
@@ -227,7 +236,7 @@ img {
       url(http://www.csszengarden.com/214/gridlines-opaque.png),
       url(http://www.csszengarden.com/214/bamboo.png);
     grid-column: 1/4;
-    grid-row: 9/10;
+    grid-row: 10/11;
     font-family: myJFont, sans-serif;
     font-size: 1.2em;
     text-transform: uppercase;

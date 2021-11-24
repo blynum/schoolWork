@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navTop {
+  display: flex;
+  background-color: black;
+  color: aliceblue;
+}
+
+/* inter-regular - latin */
+@font-face {
+  font-family: "Inter", sans-serif;
+  /* src: url(Inter/Inter-VariableFont_slnt\,wght.ttf); */
+  src: url(Inter/static/Inter-Black.ttf);
+}
