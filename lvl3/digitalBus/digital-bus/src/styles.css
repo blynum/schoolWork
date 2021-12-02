@@ -57,9 +57,30 @@ section {
   font-style: normal;
 }
 
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
 .card {
   /* width: 175px; */
   font-size: 12px;
+  flex: 0 0 auto; /* ADD */
+  display: flex; /* ADD */
+  flex-direction: column; /* ADD */
+  position: relative;
+}
+
+.card--badge {
+  /* position: absolute; */
+  width: 62px;
+  height: 0px;
+  left: 43px;
+  top: 527px;
+  color: azure;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .card--image {
@@ -68,9 +89,23 @@ section {
   /* width: 100%; */
 }
 
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--stats {
+  display: flex;
+  align-items: center;
+}
+
 .card--star {
   /* content: url(images/Star-1.png); */
   height: 14px;
+}
+
+.card--price {
+  margin-top: auto;
 }
 
 @font-face {
