@@ -1,11 +1,10 @@
 import React from "react"
-import Spots from "./Spots"
-import './App.css';
+// import Spots from "./Spots"
 
 function App() {
   return (
     <div>
-
+      <h1>Vacay Spots</h1>
     </div>
   );
 }

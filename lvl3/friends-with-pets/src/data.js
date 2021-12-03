@@ -1,9 +1,4 @@
-import React from "react"
-// import friends from "../data"
-import Friend from "./Friend"
-
-
-const friendsData = [
+const friends = [
     {
         name: "Ben",
         age: 29,
@@ -62,30 +57,4 @@ const friendsData = [
 
 ]
 
-function FriendsList() {
-    const friendsArray = friendsData.map((friend, index) => {
-        return (
-            <Friend
-                key={index + friend}
-                name={friend.name}
-                age={friend.age}
-                pets={friend.pets}
-            />
-        )
-    })
-
-
-    return (
-        <div>
-            <h2>{friendsArray}</h2>
-        </div>
-    )
-
-}
-
-export default FriendsList
-
-
-
-
-
+export default friends
