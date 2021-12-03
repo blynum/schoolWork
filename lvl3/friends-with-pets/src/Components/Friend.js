@@ -16,7 +16,7 @@ function Friend(props) {
 }
 
 function PetsList() {
-    const pets = data.map((friend) => friend.pets.map((pet, index) => {
+    const pets = props.pets.map((pet, index) => {
         return (
             <Pet
                 key={index + pet}
@@ -25,7 +25,7 @@ function PetsList() {
             />
         )
     }
-    ))
+    )
 
     return (
         <div>
@@ -33,5 +33,23 @@ function PetsList() {
         </div>
     )
 }
+// function PetsList() {
+//     const pets = data.map((friend) => friend.pets.map((pet, index) => {
+//         return (
+//             <Pet
+//                 key={index + pet}
+//                 name={pet.name}
+//                 breed={pet.breed}
+//             />
+//         )
+//     }
+//     ))
+
+//     return (
+//         <div>
+//             <h1>{pets}</h1>
+//         </div>
+//     )
+// }
 
 export default { Friend, PetsList }
