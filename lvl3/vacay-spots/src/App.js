@@ -1,10 +1,12 @@
 import React from "react"
-// import Spots from "./Spots"
+// import Spot from "./Spot"
+import VacayList from "./VacayList";
 
 function App() {
   return (
     <div>
-      <h1>Vacay Spots</h1>
+      <header><h1>Best Vacation Spots</h1></header>
+      <VacayList />
     </div>
   );
 }
