@@ -5,7 +5,7 @@ const squared = nums.map(function (num) {
     return num * num
 })
 
-console.log(squared)
+// console.log(squared)
 
 // Challenge 2:
 // Given an array of strings, return an array where 
@@ -20,7 +20,7 @@ const capitalized = names.map(name => name[0].toUpperCase() + name.slice(1)
 
 )
 
-console.log(capitalized)
+// console.log(capitalized)
 
 // Challenge 3:
 // Given an array of strings, return an array of strings that wraps each
@@ -35,4 +35,18 @@ const pokemons = ["Bulbasaur", "Charmander", "Squirtle"]
 // Your code here
 const newPokemon = pokemons.map(pokemon => `<p> ${pokemon} </p>`)
 
-console.log(newPokemon)
+// console.log(newPokemon)
+
+
+const person = {
+    name: 'Shuri',
+    location: "Wakanda",
+    age: 16
+}
+
+person.name = "Black Widowundrum"
+person.location = "Russia"
+person.age = 33
+
+
+console.log(person)

@@ -4,8 +4,8 @@ import BlogPost from "./BlogPost"
 function BlogList() {
     return (
         <div>
-            <p>BlogList</p>
-            <BlogPost />
+            <h1>prop.title</h1>
+
         </div>
     )
 }
