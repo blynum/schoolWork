@@ -56,7 +56,7 @@ function App() {
     }
 
     function subtract() {
-        setCount(count - 1)
+        setCount(prevCount => prevCount - 1)
     }
 
 

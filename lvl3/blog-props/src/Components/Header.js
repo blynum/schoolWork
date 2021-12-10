@@ -3,10 +3,10 @@ import NavBar from "./NavBar"
 
 function Header() {
     return (
-        <div>
-            <header><h1>Clean Blog</h1></header>
-            <h3>A Blog Theme by Start Bootstrap</h3>
+        <div className="header--image">
             <NavBar />
+            <header className="header--mainText"><h1>Clean Blog</h1></header>
+            <h3 className="header--subText">A Blog Theme by Start Bootstrap</h3>
         </div>
     )
 }

@@ -3,7 +3,10 @@ import React from "react"
 function Footer() {
     return (
         <footer>
-            <p>This is the footer</p>
+            <p>Twitter</p>
+            <p>Facebook</p>
+            <p>GitHub</p>
+            <p>Copyright © Your Website 2021</p>
         </footer>
     )
 }
