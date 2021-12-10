@@ -36,7 +36,7 @@ function BlogList() {
                 title={post.title}
                 subTitle={post.subTitle}
                 author={post.author}
-                date={index.date}
+                date={post.date}
             />
         )
 
