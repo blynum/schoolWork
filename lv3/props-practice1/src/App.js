@@ -1,10 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import './style.css';
+import Navbar from "./Components/Navbar"
+import Hero from "./Components/Hero"
+import Card from "./Components/Card"
+
 
 function App() {
   return (
     <div className="App">
-      <h1>App Component</h1>
+      <Navbar />
+      <Hero />
+      <Card />
+
     </div>
   );
 }
