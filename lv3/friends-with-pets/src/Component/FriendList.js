@@ -4,12 +4,15 @@ import data from "./frienddata"
 
 
 function FriendList() {
-    const friendData = data.map(friend => {
-        return <Friend
-            name={friend.name}
-            age={friend.age}
+    const friendData = data.map(friend, index => {
+        return (
+            <Friend
+                key={friend + index}
+                name={friend.name}
+                age={friend.age}
 
-        />
+            />
+        )
     })
     return (
         <div>
