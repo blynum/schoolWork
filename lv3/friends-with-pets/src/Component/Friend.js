@@ -1,16 +1,16 @@
 import React from "react"
 import Pet from "./Pet"
-import data from './frienddata'
+// import data from './frienddata'
 
 
 function Friend(props) {
     console.log(props.pets)
-    const petData = data.map(item, index => {
+    const pets = props.pets.map((pet, index) => {
         return (
             <Pet
-                key={item + index}
-                name={item.pets.name}
-                breed={item.pets.breed}
+                key={pet + index}
+                name={pet.name}
+                breed={pet.breed}
             />
         )
     }
@@ -18,9 +18,10 @@ function Friend(props) {
 
     return (
         <div>
-            <h1>{props.name}</h1>
-            <h1>{props.age}</h1>
-            {petData}
+            <h1>Name: {props.name}</h1>
+            <h1>Age: {props.age}</h1>
+            <h1>Pets</h1>
+            {pets}
         </div>
     )
 }

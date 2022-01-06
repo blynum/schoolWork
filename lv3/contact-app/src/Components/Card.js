@@ -1,18 +1,21 @@
 import React from "react"
 
-function Card() {
+
+function Card(props) {
+    console.log(props)
     return (
         <div className="contacts">
             <div className="contact--card">
-                <img src="./images/mr-whiskerson.png" />
-                <h3>Mr. Whiskerson</h3>
+                <img src={props.profilePic} className="cat" />
+                <h3>{props.name}</h3>
                 <div className="info-group">
-                    <img src="./images/phone-icon.png" />
-                    <p>(212) 555-1234</p>
+                    <img src={props.phoneicon} className="phone" />
+                    <p>{props.phone}</p>
                 </div>
                 <div className="info-group">
-                    <img src="./images/mail-icon.png" />
-                    <p>mr.whiskaz@catnap.meow</p>
+                    {/* <img src={cat} className="cat" /> */}
+                    <img src={props.emailicon} />
+                    <p>{props.email}</p>
                 </div>
 
             </div>
