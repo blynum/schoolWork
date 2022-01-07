@@ -9,14 +9,16 @@ import Card from "./Components/Card"
 function App() {
   const cards = data.map(card => {
     return <Card
-      title={card.title}
-      description={card.description}
-      price={card.price}
-      img={card.coverImg}
-      rating={card.stats.rating}
-      reviewCount={card.stats.reviewCount}
-      location={card.location}
-      spots={card.openSpots}
+      key={card.id}
+      card={card}
+    // title={card.title}
+    // description={card.description}
+    // price={card.price}
+    // img={card.coverImg}
+    // rating={card.stats.rating}
+    // reviewCount={card.stats.reviewCount}
+    // location={card.location}
+    // openSpots={card.openSpots}
     />
 
   })
@@ -24,7 +26,10 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      {cards}
+      <section className="cards-list">
+        {cards}
+      </section>
+
 
     </div>
   );
