@@ -1,12 +1,21 @@
 import React from "react"
+import data from "../data"
 import BlogPost from "./BlogPost"
 
 function BlogList() {
-    return (
-        <div>
-            <h2>Blog List</h2>
-            <BlogPost />
+    const posts = data.map((post, index) => {
+        return <BlogPost
+            key={index}
+            title={post.title}
+            subTitle={post.subTitle}
+            author={post.author}
+            date={post.date}
 
+        />
+    })
+    return (
+        <div className="blogList">
+            {posts}
         </div>
     )
 }

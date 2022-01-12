@@ -2,9 +2,15 @@ import React from "react"
 
 function NavBar() {
     return (
-        <div>
-            <span>Navigation Bar</span>
-        </div>
+        <nav>
+            <span className="nav--title">Start Bootstrap</span>
+            <ul className="nav--list">
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>SAMPLE POST</li>
+                <li>CONTACT</li>
+            </ul>
+        </nav>
     )
 }
 
