@@ -9,17 +9,19 @@ function App() {
   // const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
   // function addItem() {
   //   const newThingText = `Thing ${thingsArray.length + 1}`
-  //   thingsArray.push(newThingText)
+  //   thingsArray.push(newThingText) This is directly modifying state...don't do
   //   console.log(thingsArray)
   // }
-  const [things, setThings] = React.useState(["Thing 1", "Thing 2"])
+  const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"])
 
   function addItem() {
-    const newThingText = `Thing ${things.length + 1}`
-    setThings(prevState => [...prevState, newThingText])
+    const addItem = `Thing ${thingsArray.length + 1}`
+    // using spread operator -----------------*
+    setThingsArray(prevThingsArray => [...prevThingsArray, addItem])
   }
+  // could use preState in place of preThingsArray
 
-  const thingsElements = things.map(thing => <p key={thing}>{thing}</p>)
+  const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
 
 
 
