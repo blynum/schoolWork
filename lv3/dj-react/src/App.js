@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import './App.css';
 import Square from "./Square"
+import Player from "./Playbutton"
 
 
 
@@ -117,6 +118,7 @@ function App() {
       <button onClick={bigDJTwo}>Big DJ Two</button>
       <button onClick={bigDJThree}>Big DJ Three</button>
       <button onClick={bigDJFour}>Big DJ Four</button>
+      <Player />
     </div>
   );
 }
