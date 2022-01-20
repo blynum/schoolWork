@@ -1,10 +1,12 @@
 import React from "react"
 
-function Square() {
+function Square(props) {
     return (
-        <div className="square">
-            <h2>square</h2>
-        </div>
+        <div className="box"
+            style={{
+                backgroundColor: props.background
+            }}>
+        </div >
     )
 }
 
