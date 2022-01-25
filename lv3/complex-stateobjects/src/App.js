@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import './App.css';
 import woman from "./images/womendesk.png"
-
 import Star from "./Star"
 
 function App() {
