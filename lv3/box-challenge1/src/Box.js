@@ -11,13 +11,38 @@ import React from "react"
      *    backgroundColor to "#222222". If off, set it to "none"
      */
 
+/**
+     * Challenge part 3: Create state controlling whether
+     * this box is "on" or "off". Use the incoming
+     * `props.on` to determine the initial state.
+     * 
+     * Create an event listener so when the box is clicked,
+     * it toggles from "on" to "off".
+     * 
+     * Goal: clicking each box should toggle it on and off.
+     */
+
+
+
 function Box(props) {
-    console.log(props.on)
+    // console.log(props.on)
+
     const styles = {
-        backgroundColor: props.on ? "#222222" : "none"
+        backgroundColor: props.on ? "#222222" : "transparent"
     }
+    // const [on, setOn] = React.useState(props.on)
+
+    // const styles = {
+    //     backgroundColor: on ? "#222222" : "transparent"
+    // }
+
+    // function toggle() {
+    //     setOn(prevOn => !prevOn)}
     return (
-        <div style={styles} className="box"></div>
+        <div style={styles} className="box">
+
+        </div>
+
     )
 }
 

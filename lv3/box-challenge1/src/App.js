@@ -6,7 +6,7 @@ import Box from "./Box"
 
 // function App(props) 
 function App() {
-  const [squares, setSquare] = React.useState(boxes)
+  const [squares, setSquares] = React.useState(boxes)
   // const style = {
   //   backgroundColor: props.darkMode ? "#222222" : "#cccccc"
   // }
@@ -26,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      Box Challenge 1
       {squareArray}
 
     </div>
