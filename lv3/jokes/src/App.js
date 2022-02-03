@@ -7,6 +7,7 @@ function App() {
   const jokeElement = jokesData.map(joke => {
     // Component
     return <Joke
+      key={joke.index}
       setup={joke.setup} /*properites*/
       punchline={joke.punchline}
     />
