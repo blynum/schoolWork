@@ -12,21 +12,47 @@ function App() {
     comments: ""
   })
 
-  function handleChange(event) {
-    const { name, value } = event.target
-    console.log(event.target.name)
-    setFormData(prevFormData => {
-      return {
-        ...prevFormData,
-        [name]: value
-      }
+  const [formItems, setFormItems] = React.useState([]);
+
+  const handleChange = (event) => {
+    setFormData({
+      ...
+      formData, [event.target.name]: event.target.value
     })
   }
+  console.log(formData)
 
-  function handleSubmit(event) {
-    event.preventDefault()
-    console.log(formData)
-  }
+  const handleSubmit =
+    (event) => {
+      event.preventDefault()
+      console.log(formData);
+
+      setFormItems(prevFormItems => {
+        return [...prevFormItems,
+        {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          placeOfBirth: formData.placeOfBirth,
+          phone: formData.phone,
+          favoriteFood: formData.favoriteFood,
+          comments: formData.comments
+        }]
+      })
+    }
+
+  const addToList = formItems.map(formItem => {
+    return (
+      <h1>{formItem.firstName}</h1>
+      // <h1>{formItem.lastName}</h1>,
+      // <h2>{formItem.email}</h2>,
+      // <h2>{formItem.placeOfBirth}</h2>,
+      // <h2>{formItem.phone}</h2>,
+      // <h2>{formItem.favoriteFood}</h2>,
+      // <h2>{formItem.comments}</h2>
+
+    )
+  })
 
 
   return (
@@ -84,9 +110,8 @@ function App() {
         />
         <button className="form--button">Submit</button>
 
-
-
       </form>
+      {addToList}
 
     </div>
   );

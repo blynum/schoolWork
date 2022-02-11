@@ -21,6 +21,7 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
   box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
+  margin-bottom: 20px;
 }
 
 .form--textArea {
@@ -38,4 +39,12 @@ header {
   color: white;
   background-color: #639;
   border: none;
+}
+
+.badge {
+  display: grid;
+  color: white;
+  grid-template-columns: 1fr 1fr;
+  border-style: outset;
+  border-radius: 5px;
 }

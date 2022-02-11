@@ -2,11 +2,15 @@ import React from "react"
 import './App.css';
 
 function App() {
+  // state for the form
   const [formData, setFormData] = React.useState(
     {
-      name: ""
+      guestName: ""
     })
+  // defining the list
+  const [list, setList] = React.useState([])
 
+  //  
   function handleChange(event) {
     event.preventDefault()
     const { name, value } = event.target
@@ -18,28 +22,30 @@ function App() {
     })
   }
 
-  function handleClick(event) {
+  function handleSubmit(event) {
     event.preventDefault()
-    // document.getElementById("myText").value = "";
-    const h1 = document.createElement('h1')
-    h1.textContent = formData
-    document.getElementsByTagName("body")[0].append(h1)
-
-    console.log(handleClick)
+    setList(prevList => [formData.guestName, ...prevList])
   }
+
+
   return (
     <div className="App">
       <h1>Name Entry Assignment</h1>
-      <form className="form">
+      <form onSubmit={handleSubmit} className="form">
         <input
           id="myText"
           placeholder="Type Name"
           onChange={handleChange}
-          name="name"
-          value={formData.name}
+          name="guestName"
+          value={formData.guestName}
         />
-        {/* <h1>update DOM to show what was put in the input box</h1> */}
-        <button onClick={handleClick} className="form--button">Submit</button>
+        <h1></h1>
+        <button className="form--button">Submit</button>
+        <ul>
+          {list.map(item => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </form>
     </div>
   );
