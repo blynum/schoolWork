@@ -1,52 +1,48 @@
-import { useState } from "react";
+import React, { useState } from "react"
 
-export default function BadgeForm({ addContact }) {
-
+function Form(props) {
     const [contactInfo, setContactInfo] = useState({
-        //declare objects that will be in form
         firstName: "",
         lastName: "",
         email: "",
         placeOfBirth: "",
         phone: "",
         favoriteFood: "",
-        contacts: ""
-    });
+        comments: ""
+    })
 
-    //handle change takes input and applies it to the property
-    const handleChange = (event) => {
-        // callback function to preserve the values of the other fields
-        setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
-    };
+    const handleChange = (e) => {
+        const { value, name } = e.target
+        setContactInfo((prevContactInfo) => {
+            return {
+                ...prevContactInfo,
+                [name]: value
+            }
+        })
+    }
 
-    /*add contact function from app.js is passed in to our submit function
-    will take in our contact info as a parameter
-    set contactInfo will be set to all empty strings*/
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        addContact(contactInfo);
-
-
-        //after we submit it will be empty fields again
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("Form Was Submitted")
+        // passing in the new state, i.e. "contactInfo"
+        props.addEntryToList(contactInfo)
         setContactInfo({
             firstName: "",
             lastName: "",
             email: "",
             placeOfBirth: "",
-            phoneNumber: "",
+            phone: "",
             favoriteFood: "",
             comments: ""
 
-        });
-    };
+        })
+
+    }
+
 
     return (
-
-        //form
-        //prac
-        <div className="form-container">
-            <form className="form" onSubmit={handleSubmit}>
+        <div>
+            <form onSubmit={handleSubmit}>
                 <input
                     type="text" required
                     name="firstName"
@@ -78,12 +74,12 @@ export default function BadgeForm({ addContact }) {
                     minLength="5" />
 
                 <input
-                    type="number" required
-                    name="phoneNumber"
+                    type="tel" required
+                    name="phone"
                     placeholder="phoneNumber"
-                    value={contactInfo.phoneNumber}
+                    value={contactInfo.phone}
                     onChange={handleChange}
-                    minLength="5" />
+                />
 
                 <input
                     type="text" required
@@ -100,10 +96,15 @@ export default function BadgeForm({ addContact }) {
                     value={contactInfo.comments}
                     onChange={handleChange} />
 
-                <button className="form--button">Submit</button>
+                <button
+                    type="submit"
+                    className="form--button"
+                >Submit
+                </button>
+
             </form>
-
-
         </div>
-    );
+    )
 }
+
+export default Form
