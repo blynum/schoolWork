@@ -6,29 +6,33 @@ var shift = parseInt(readline.question('How many letters would you like to shift
 
 
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
-let newalpha = "";
+let newAlpha = letterArr.split('');
 
-// function to create shift alphabet; look ahead by "n" amount of characters and wrap back around to the beginning 
-function shift() {
-    for (let i = 0; i < alphabet.length; i++) {
-        let offset = (i + n) % alphabet.length;
-        newalpha += alphabet[offset];
-    }
+const cipher = (input, shift) => {
+    // Takes user input as a string and changes it to an array.
+    const inputText = input.split('')
+    // Map user inputArr and encrypt inputText by each letter that matches a letter in the letterArr
+    const encryptedText = inputText.map(letter => {
+        // check if letter is in the letter arr and
+        const checkLetter = newAlpha.some(item => item === letter)
+        if (letter === ' ') {
+            return 32
+        } else if (checkLetter === true) {
+            return letter.charCodeAt() + shift
+        } else {
+            return letter.charCodeAt()
+        }
+    })
+    // Maps array and turns the character code back to the character
+    const hideText = encryptedText.map(letter => {
+        if (letter > 122) {
+            letter = letter - 26
+        }
+        return String.fromCharCode(letter)
+    })
+    // Joins the letters back to one string
+    const hiddenText = hideText.join('')
+    // Returns the ciphered phrase
+    return hiddenText
 }
-
-
-// encoding function, take each letter in the message and find its replacment
-
-function encode(message) {
-    let result = "";
-    message = message.toLowerCase();
-    for (let i = 0; i < message.length; i++) {
-        let index = alphabet.indexOf(message[i]);
-        result += newalpha[index];
-    }
-    return result
-}
-
-
-
-
+console.log(cipher(input, shift)) 
